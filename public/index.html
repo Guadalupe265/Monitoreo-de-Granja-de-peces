@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Css/login.css">
+    <link rel="icon" type="image/png" href="/Imagenes/Mojarra.png">
+    <title>Hara</title>
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <!-- Formulario de Registro -->
+        <div class="signup">
+            <form id="formRegistro">
+                <label for="chk" aria-hidden="true">Regístrate</label>
+                <input type="text" id="nombreUsuario" placeholder="Nombre del Usuario" required="">
+                <input type="email" id="emailRegistro" placeholder="Email" required="">
+                <input type="password" id="passwordRegistro" placeholder="Contraseña" required="">
+                <button type="submit" id="btnRegistro" class="wave-button">Continuar<span class="wave-effect"></span></button>
+            </form>
+        </div>
+
+        <!-- Formulario de Inicio de Sesión -->
+        <div class="login">
+            <form id="formLogin">
+                <label for="chk" aria-hidden="true">Ingresa</label>
+                <input type="email" id="emailLogin" placeholder="Email" required="">
+                <input type="password" id="passwordLogin" placeholder="Contraseña" required="">
+                <button type="submit" id="btnLogin" class="wave-button">Continuar<span class="wave-effect"></span></button>
+            </form>
+        </div>
+    </div>
+    <script src="/Js/user.js" type="module" defer></script>
+</body>
+</html>

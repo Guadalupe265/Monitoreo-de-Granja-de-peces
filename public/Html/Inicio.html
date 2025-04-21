@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Inicio/style.css">
+    <link rel="icon" type="image/png" href="/Imagenes/Mojarra.png">
+    <script src="https://kit.fontawesome.com/1db16d19c5.js" crossorigin="anonymous"></script>
+    <title>Hara</title>
+</head>
+<body>
+    <div class="contenedor">
+		<nav>
+			<div class="enlaces">
+				<a href="#">Inicio</a>
+				<a href="#">Notificacion</a>
+				<a href="/Html/Contacto.html">Contacto</a>
+				<button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+			</div>
+		</nav>
+    </div>
+    <div class="cards">
+        <!-- TEMPERATURE -->
+        <div class="card">
+          <p><i class="fas fa-thermometer-half" style="color:#e72b3b;"></i> TEMPERATURA</p>
+          <p><span class="reading" id="temp">--</span></p>
+        </div>
+        <!-- PH --> 
+        <div class="card">
+          <p><i class="fa-solid fa-droplet fa-bounce" style="color: #00add6;"></i> PH</p>
+          <p><span class="reading" id="hum">--</span> &percnt;</p>
+        </div>
+        <!-- PRESSURE -->
+        <div class="card">
+          <p><i class="fa-solid fa-gauge fa-fade" style="color: #e47637;"></i> ?</p>
+          <p><span class="reading" id="pres">--</span> ?</p>
+        </div>
+        <script src="/Js/main.js"></script>   
+        <script src="/Js/cont.js"></script>
+</body>
+</html>

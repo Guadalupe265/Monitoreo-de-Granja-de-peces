@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Ola</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #87CEEB, #f7e5a6); /* Cielo y arena */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .wave-button {
+            position: relative;
+            background: #00a8e8; /* Azul marino */
+            color: white;
+            font-size: 20px;
+            padding: 20px 50px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Agregamos una onda en la parte inferior */
+        .wave-button::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url("https://i.imgur.com/D9Nt5kF.png");
+            background-size: cover;
+        }
+
+        /* Efecto de ola animado */
+        .wave-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Ola animada cuando el mouse pasa */
+        .wave-effect {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease-out;
+        }
+
+        .wave-button:hover .wave-effect {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="wave-button">
+        🌊 Ola de Playa 🏖️
+        <span class="wave-effect"></span>
+    </button>
+
+</body>
+</html>

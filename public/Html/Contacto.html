@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Contacto/cont.css">
+    <link rel="icon" type="image/png" href="/Imagenes/Mojarra.png">
+    <script src="https://kit.fontawesome.com/1db16d19c5.js" crossorigin="anonymous"></script>
+    <title>Hara</title>
+</head>
+<body>
+    <div class="contenedor">
+		<nav>
+			<div class="enlaces">
+				<a href="/Html/Inicio.html">Inicio</a>
+				<a href="#">Notificacion</a>
+				<a href="#">Contacto</a>
+				<button class="switch" id="switch">
+					<span><i class="fas fa-sun"></i></span>
+					<span><i class="fas fa-moon"></i></span>
+				</button>
+			</div>
+		</nav>
+    </div>
+    <div class="contenedor-form">
+    <form action="https://formsubmit.co/antonioguadalupeg14@gmail.com"  method="POST">
+        <h2>Contacto</h2>
+        <div class="input-ground">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name" placeholder="Nombre">
+
+            <label for="phone">Telefono</label>
+            <input type="tel" name="phone" id="phone" placeholder="Telefono">
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+
+            <label for="message">Mensaje</label>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"> </textarea>
+
+            <input class="btn" type="submit" value="Enviar">
+        </div>
+        </div>
+    </form>
+    <script src="/Js/main.js"></script>
+</body>
+</html>
