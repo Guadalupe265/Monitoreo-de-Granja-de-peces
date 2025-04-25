@@ -9,6 +9,7 @@
     <title>Hara</title>
 </head>
 <body>
+  <h1>HARA 🐟</h1>
     <div class="contenedor">
 		<nav>
 			<div class="enlaces">
@@ -26,18 +27,24 @@
         <!-- TEMPERATURE -->
         <div class="card">
           <p><i class="fas fa-thermometer-half" style="color:#e72b3b;"></i> TEMPERATURA</p>
-          <p><span class="reading" id="temp">--</span></p>
+          <p><span class="reading" id="temp"></span></p>
         </div>
         <!-- PH --> 
         <div class="card">
-          <p><i class="fa-solid fa-droplet fa-bounce" style="color: #00add6;"></i> PH</p>
-          <p><span class="reading" id="hum">--</span> &percnt;</p>
-        </div>
-        <!-- PRESSURE -->
+          <p><i class="fas fa-thermometer-half" style="color:#00add6;"></i> PH</p>
+          <p><span class="reading" id="phValue"></span></p>
+        </div>  
+        <!-- TDS -->
         <div class="card">
-          <p><i class="fa-solid fa-gauge fa-fade" style="color: #e47637;"></i> ?</p>
-          <p><span class="reading" id="pres">--</span> ?</p>
+          <p><i class="fas fa-thermometer-half" style="color:#e47637;"></i> CONCUCTIVIDAD</p>
+          <p><span class="reading" id="tdsValue"></span></p>
         </div>
+        <!--Tur --> 
+        <div class="card">
+          <p><i class="fas fa-thermometer-half" style="color:#8b23c7;"></i> TURBIDEZ</p>
+          <p><span class="reading" id="turbidezValor"></span></p>
+        </div>
+    </div>
         <script src="/Js/main.js"></script>   
         <script src="/Js/cont.js"></script>
 </body>

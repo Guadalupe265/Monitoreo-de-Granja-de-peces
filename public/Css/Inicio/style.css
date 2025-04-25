@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #F1F1F1;
+  background: #e2dddd;
   font-family: "Roboto", sans-serif;
   transition: 0.3s ease all;
 }
@@ -13,10 +13,21 @@ body.dark {
   background: #111111;
 }
 
-a {
+body.dark h1 {
+  color: #FEFEFE;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
   color: #222222;
-  text-decoration: none;
-  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease all;
 }
 
 .contenedor {
@@ -52,14 +63,17 @@ nav .enlaces {
   margin-left: auto;
 }
 nav .enlaces a {
+  text-decoration: none;
   margin-right: 40px;
+  color: #111111;
+  font-size: 1.3rem;
 }
 nav .enlaces a:hover {
-  color: #707070;
+  color: #C8C8C8;
 }
 
 .switch {
-  background: #343D5B;
+  background: #222222;
   border-radius: 1000px;
   border: none;
   position: relative;
@@ -73,21 +87,20 @@ nav .enlaces a:hover {
   width: 30px;
   height: 30px;
   position: absolute;
-  background: #F1F1F1;
+  background: #ACABAB;
   top: 0;
   left: 0;
-  right: unset;
   border-radius: 100px;
   transition: 0.3s ease all;
   box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .switch.active {
   background: orange;
-  color: #000;
+  color: #111111;
 }
 .switch.active::after {
-  right: 0;
   left: unset;
+  right: 0;
 }
 .switch span {
   width: 30px;
@@ -95,33 +108,35 @@ nav .enlaces a:hover {
   line-height: 30px;
   display: block;
   background: none;
-  color: #fff;
+  color: #FEFEFE;
 }
 
 .cards {
   display: flex;
-  gap: 25px;
   flex-wrap: wrap;
+  gap: 25px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
-
-.card {
-  background-color: #fff;
+.cards .card {
+  background-color: #FEFEFE;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  width: 200px;
+  width: 205px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   transition: 0.3s ease all;
 }
-body.dark .card {
+.cards .card p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+body.dark .cards .card {
   background: #222222;
   color: #FEFEFE;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-.card p {
-  margin: 10px 0;
-  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,122 +1,141 @@
-$negro: #111111;
+$negro: #111111; 
 $blanco: #FEFEFE;
 $grisOscuro: #222222;
 $grisClaro: #C8C8C8;
 $grisClaroHover: #ACABAB;
-$azul: #3E60E9;
-$azulHover: #254BE6;
 
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-	background: #F1F1F1;
-	font-family: 'Roboto', sans-serif;
-	transition: .3s ease all;
+  background: #e2dddd;
+  font-family: 'Roboto', sans-serif;
+  transition: 0.3s ease all;
 
-	&.dark {
-		background: $negro;
-	}
+  &.dark {
+    background: $negro;
+  }
 }
 
-a {
-	color: $grisOscuro;
-	text-decoration: none;
-	font-weight: 500;
+body.dark h1 {
+  color: $blanco;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $grisOscuro;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease all;
 }
 
 .contenedor {
-	max-width: 1000px;
-	width: 90%;
-	margin: auto;
-	padding: 50px 0;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  padding: 50px 0px 0px; 
 }
 
 nav {
-	background: $blanco;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 15px 20px;
-	border-radius: 100px;
-	transition: .3s ease all;
-	box-shadow: $sombraDark;
-	
-	body.dark & {
-		background: $grisOscuro;
-		box-shadow: $sombraLight;
-		a {
-			color: $grisClaro;
-			&:hover {
-				color: $blanco;
-			}
-		}
-	}
+  background: $blanco;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: $sombraDark;
 
-	.enlaces {
-		display: flex;
-		align-items: center;
-        margin-left: auto;
-		a {
-			margin-right: 40px;
-			&:hover {
-				color: #707070;
-			}
-		}
-	}
+  body.dark & {
+    background: $grisOscuro;
+    box-shadow: $sombraLight;
+
+    a {
+      color: $grisClaro;
+
+      &:hover {
+        color: $blanco;
+      }
+    }
+  }
+
+  .enlaces {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    a {
+      text-decoration: none;
+      margin-right: 40px;
+	  color: $negro;
+	  font-size: 1.3rem;
+
+      &:hover {
+        color: $grisClaro;
+      }
+    }
+  }
 }
 
 .switch {
-	background: #343D5B;
-	border-radius: 1000px;
-	border: none;
-	position: relative;
-	cursor: pointer;
-	display: flex;
-	outline: none;
-	&::after {
-		content: "";
-		display: block;
-		width: 30px;
-		height: 30px;
-		position: absolute;
-		background: #F1F1F1;
-		top: 0;
-		left: 0;
-		right: unset;
-		border-radius: 100px;
-		transition: .3s ease all;
-		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
-	}
-	&.active {
-		background: orange;
-		color: #000;
-		&::after {
-			right: 0;
-			left: unset;
-		}
-	}
-	span {
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
-		display: block;
-		background: none;
-		color: #fff;
-	}
+  background: $grisOscuro;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: $grisClaroHover;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+  }
+
+  &.active {
+    background: orange;
+    color: $negro;
+
+    &::after {
+      left: unset;
+      right: 0;
+    }
+  }
+
+  span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: $blanco;
+  }
 }
 
 form {
     padding: 50px 55px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 450px;
+    width: 400px;
     background: $blanco;
     border-radius: 10px;
     transition: .3s ease all;
@@ -204,7 +223,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 88vh;
 }
 
 textarea{
