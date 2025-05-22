@@ -5,13 +5,13 @@ import time
 time.sleep(5)
 
 # Ejecutar primero !fish 2 y !mine 2
-pyautogui.typewrite('!fish 2')
+pyautogui.typewrite('!fish 3')
 pyautogui.press('enter')
-time.sleep(0.5)
+time.sleep(1)
 
-pyautogui.typewrite('!mine 2')
+pyautogui.typewrite('!mine 4')
 pyautogui.press('enter')
-time.sleep(0.5)
+time.sleep(1)
 
 # Guardar el tiempo de la última ejecución para contar los 5 minutos
 last_fish_time = time.time()
@@ -24,9 +24,9 @@ while True:
     time.sleep(6.4)
 
     # Enviar !use 11
-    pyautogui.typewrite('!use 11')
-    pyautogui.press('enter')
-    time.sleep(6.4)
+    #pyautogui.typewrite('!use 11')
+    #pyautogui.press('enter')
+    #time.sleep(6.4)
 
     # Ejecutar !fish 2 si ya pasaron 5 minutos
     if time.time() - last_fish_time >= 300:
@@ -44,4 +44,3 @@ while True:
 
     # Espera antes de repetir el ciclo
     time.sleep(1)
-

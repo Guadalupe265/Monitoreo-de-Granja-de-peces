@@ -3,74 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botón Ola</title>
-    <style>
-        body {
-            background: linear-gradient(to bottom, #87CEEB, #f7e5a6); /* Cielo y arena */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-
-        .wave-button {
-            position: relative;
-            background: #00a8e8; /* Azul marino */
-            color: white;
-            font-size: 20px;
-            padding: 20px 50px;
-            border: none;
-            cursor: pointer;
-            border-radius: 50px;
-            overflow: hidden;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Agregamos una onda en la parte inferior */
-        .wave-button::before {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: url("https://i.imgur.com/D9Nt5kF.png");
-            background-size: cover;
-        }
-
-        /* Efecto de ola animado */
-        .wave-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        /* Ola animada cuando el mouse pasa */
-        .wave-effect {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 300px;
-            height: 300px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.5s ease-out;
-        }
-
-        .wave-button:hover .wave-effect {
-            transform: translate(-50%, -50%) scale(2);
-            opacity: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="/Css/Notificaciones/noti.css">
+    <link rel="icon" type="image/png" href="/Imagenes/Mojarra.png">
+    <script src="https://kit.fontawesome.com/1db16d19c5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <title>Notificaciones</title>
 </head>
-<body>
 
-    <button class="wave-button">
-        🌊 Ola de Playa 🏖️
-        <span class="wave-effect"></span>
-    </button>
+<body>
+<h1>HARA 🐟</h1>
+<div class="contenedor">
+		<nav>
+			<div class="enlaces">
+				<a href="/Html/Inicio.html">Inicio</a>
+				<a href="#">Notificacion</a>
+				<a href="/Html/Contacto.html">Contacto</a>
+			</div>
+		</nav>
+</div>
+
+    <div class="contenedor2"> 
+        <form action="">
+            <div class="selectbox">
+                <div class="select" id="select">
+                    <div class="contenido-select">
+                       <h2 class="titulo">Selecciona tu variable</h2> 
+                    </div>
+                     <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+                <div class="opciones" id="opciones">
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                           <img src="/Imagenes/frio.png" alt="">
+                            <div class="textos">
+                                <h3 class="titulo">Temperatura</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                           <img src="/Imagenes/equilibrio-de-ph.png" alt="">
+                            <div class="textos">
+                                <h3 class="titulo">Ph</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                           <img src="/Imagenes/conductivad.png" alt="">
+                            <div class="textos">
+                                <h3 class="titulo">Conductividad</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                           <img src="/Imagenes/conductivad.png" alt="">
+                            <div class="textos">
+                                <h3 class="titulo">Turbidez</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="opcion">
+                        <div class="contenido-opcion">
+                           <img src="/Imagenes/o2.png" alt="">
+                            <div class="textos">
+                                <h3 class="titulo">Oxigeno Disuelto</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <input type="hidden" name="variable" id="inputSelect" value="">
+        </form>
+    </div>
+
+    <div class='grafica'>
+        <canvas id="graficaVariable"></canvas>
+    </div>
+    <!-- Alerta (más cerca de la gráfica) -->
+     <div id="alerta" style="text-align:center; font-weight: bold; color: red; margin-top: -10px; margin-bottom: 2px;"></div>
+     
+     <!-- Botón Excel (pegado debajo del alerta) -->
+    <div style="text-align: center; margin-top: 0px; margin-bottom: 20px;">
+        <button onclick="exportarXLSX()" style="padding: 8px 18px; font-size: 15px;">
+            📥 Exportar Excel
+        </button>
+    </div>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+<script src="/Js/main.js"></script>
+<script src="/Js/noti.js"> </script>
 
 </body>
 </html>
